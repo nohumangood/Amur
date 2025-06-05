@@ -32,7 +32,7 @@ Amur/
 ## 🚀 How to Run
 
 ### 1. Unzip the Package  
-Extract the provided ZIP file.
+Extract the provided ZIP file. (Download the "how_to_install_amur.txt")
 
 ### 2. Set API Key  
 Open the appropriate script depending on which patching mode you want to use:
