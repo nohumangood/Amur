@@ -80,3 +80,10 @@ Each tool subfolder includes:
 ## 🔐 API Key Notice
 
 An `OPENAI_API_KEY` is included in the codebase for peer review purposes. It will be removed after the review process is complete.
+
+## 📊 RLFixer Comparison (JLeaks)
+
+Patch results from the RLFixer baseline on the JLeaks dataset are included for comparison:
+
+- `jleaks_fixes/`: All patch attempts by RLFixer  
+- `jleaks_real_fixes/`: Cases where RLFixer proposed any patch, regardless of correctness
