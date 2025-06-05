@@ -5,29 +5,29 @@
 
 ## 📦 Project Structure
 
+```plaintext
 Amur/
-├── amur_lim/ # Patch results using Amur
-│ ├── checkerframework/
-│ ├── codeguru/
-│ ├── infer/
-│ ├── pmd/
-│ ├── spotbugs/
-│ ├── jleaks/
-│ ├── amur_lim_parser.py # Main script for Amur patching
-│ └── amur_lim.py # Contains OPENAI_API_KEY
+├── amur_lim/                      # Patch results using Amur
+│   ├── checkerframework/
+│   ├── codeguru/
+│   ├── infer/
+│   ├── pmd/
+│   ├── spotbugs/
+│   ├── jleaks/
+│   ├── amur_lim_parser.py        # Main script for Amur patching
+│   └── amur_lim.py               # Contains OPENAI_API_KEY
 │
-├── pure_llm/ # Patch results using plain LLM (no Amur)
-│ ├── checkerframework/
-│ ├── codeguru/
-│ ├── infer/
-│ ├── pmd/
-│ ├── spotbugs/
-│ ├── jleaks/
-│ ├── pure_llm_parser.py # Main script for LLM-only patching
-│ └── pure_llm.py # Contains OPENAI_API_KEY
+├── pure_llm/                      # Patch results using plain LLM (no Amur)
+│   ├── checkerframework/
+│   ├── codeguru/
+│   ├── infer/
+│   ├── pmd/
+│   ├── spotbugs/
+│   ├── jleaks/
+│   ├── pure_llm_parser.py        # Main script for LLM-only patching
+│   └── pure_llm.py               # Contains OPENAI_API_KEY
 └── ...
-
-
+```
 
 ## 🚀 How to Run
 
@@ -57,31 +57,26 @@ python amur_lim/amur_lim_parser.py
 
 # For LLM-only patching
 python pure_llm/pure_llm_parser.py
+```
 
-📁 Folder Details
-Each of the amur_lim/ and pure_llm/ directories contains patching results for six static analysis tools:
+## 📁 Folder Details
 
-checkerframework/
+Each of the `amur_lim/` and `pure_llm/` directories contains patching results for six static analysis tools:
 
-codeguru/
-
-infer/
-
-pmd/
-
-spotbugs/
-
-jleaks/
+- `checkerframework/`
+- `codeguru/`
+- `infer/`
+- `pmd/`
+- `spotbugs/`
+- `jleaks/`
 
 Each tool subfolder includes:
+- `GPT-4o/`, `GPT-4o-mini/`, `o1/`: Patch results by LLM variant
+- `manual_result/`: Manually verified patch correctness
 
-GPT-4o/, GPT-4o-mini/, o1/: Patch results by LLM variant
+- `amur_lim/`: Uses Amur to guide patch generation  
+- `pure_llm/`: Uses LLMs directly without Amur logic
 
-manual_result/: Manually verified patch correctness
+## 🔐 API Key Notice
 
-amur_lim/: Uses Amur to guide patch generation
-
-pure_llm/: Uses LLMs directly without Amur logic
-
-🔐 API Key Notice
-An OPENAI_API_KEY is included in the codebase for peer review purposes. It will be removed after the review process is complete.
+An `OPENAI_API_KEY` is included in the codebase for peer review purposes. It will be removed after the review process is complete.
